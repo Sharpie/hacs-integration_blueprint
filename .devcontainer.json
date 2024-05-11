@@ -1,6 +1,10 @@
 {
     "name": "ludeeus/integration_blueprint",
     "image": "mcr.microsoft.com/devcontainers/python:3.11-bullseye",
+    "runArgs": ["--userns=keep-id"],
+    "containerEnv": {
+        "HOME": "/home/vscode"
+    },
     "postCreateCommand": "scripts/setup",
     "forwardPorts": [
         8123
